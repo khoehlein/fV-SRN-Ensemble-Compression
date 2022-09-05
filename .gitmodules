@@ -1,3 +1,9 @@
 [submodule "external/pyrenderer"]
 	path = external/pyrenderer
 	url = https://github.com/shamanDevel/fV-SRN.git
+[submodule "external/sz3"]
+	path = external/sz3
+	url = https://github.com/szcompressor/SZ3.git
+[submodule "external/tthresh"]
+	path = external/tthresh
+	url = https://github.com/rballester/tthresh.git
