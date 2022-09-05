@@ -1,0 +1,35 @@
+# C++
+bin/
+build/
+cmake-build-debug/
+
+# Python
+/applications/.idea
+/applications/env
+/applications/kernel_cache
+*.pyc
+.ipynb_checkpoints/
+/applications/experiments/**/*.sh
+
+# LaTeX
+*-eps-converted-to.pdf
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex
+*.tps
+
+# Results
+*.pygstyle
+*.pygtex
+/applications/volnet/cache/
+/applications/volnet/results/
+*mc-cache.hdf5
+/applications/test-*.png
+*.png
+*.csv
+
+# Git
+.idea/
