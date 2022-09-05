@@ -1,0 +1,1 @@
+raise Exception('[ERROR] Job failed')

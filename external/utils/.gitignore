@@ -1,0 +1,11 @@
+*.pyc
+results/
+data/netcdf/
+*.pt
+*.nc
+*.pth
+*.json
+*.pdf
+*.npy
+*.npz
+.idea/

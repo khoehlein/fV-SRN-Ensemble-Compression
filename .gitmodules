@@ -1,0 +1,3 @@
+[submodule "external/pyrenderer"]
+	path = external/pyrenderer
+	url = https://github.com/shamanDevel/fV-SRN.git
