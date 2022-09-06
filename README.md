@@ -37,6 +37,8 @@ A Python environment can be set up using [`environment.yml`](environment.yml). U
     bash setup.sh 
 
 The file `setup.sh` is provided for convenience and summarizes the build procedures for the submodules. For details (and common pitfalls) concerning these, we refer to the respective original repositories.
+After running the setup, the pyrenderer binaries directory needs to be added to `PYTHONPATH` to allow the interpreter to find it.
+
 
 ## Project outline
 
