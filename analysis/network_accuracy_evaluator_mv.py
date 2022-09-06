@@ -5,7 +5,7 @@ import numpy as np
 import pandas as pd
 import torch
 
-from analysis.deviation_statistics import DeviationStatistics
+from analysis.statistics import DeviationStatistics
 from data.datasets.multivariate import MultivariateEnsembleDataStorage
 from data.datasets.univariate import WorldSpaceDensityEvaluator
 from data.necker_ensemble.single_variable import load_scales

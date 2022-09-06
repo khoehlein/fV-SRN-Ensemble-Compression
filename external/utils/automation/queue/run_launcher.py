@@ -1,5 +1,5 @@
 import argparse
-from utils.automation.queue import QueueManager, JobLauncher, LAUNCHER_QUEUE
+from external.utils.automation.queue import QueueManager, JobLauncher
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
@@ -9,10 +9,10 @@ if __name__ == '__main__':
         action='store_true'
     )
     parser.set_defaults(makedirs=False)
-    parser.add_argument('--basepath', type=str, help='base path to use for ConfigLauncher', default='')
+    parser.add_argument('--basepath', type=str, help='base path to use for ConfigLauncher', required=True)
     args = parser.parse_args()
 
-    base_path = args.basepath if len(args.basepath) > 0 else LAUNCHER_QUEUE
+    base_path = args.basepath
     queue = QueueManager(base_path, make_directories=args.makedirs)
     launcher = JobLauncher(queue)
     launcher.run()

@@ -1,11 +1,7 @@
 import os
 import time
 import subprocess
-import uuid
-from enum import Enum
 from itertools import chain
-
-from utils.misc import get_timestamp_string
 
 
 class ComputeJob(object):

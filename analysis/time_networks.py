@@ -7,8 +7,7 @@ import imageio
 from typing import Tuple, Optional
 import pyrenderer
 
-from data.output import get_output_base_path
-from training.in_out.directories import get_project_base_path
+from training.in_out.directories import get_project_base_path, get_output_base_path
 
 BLEND_TO_WHITE_BACKGROUND = True
 

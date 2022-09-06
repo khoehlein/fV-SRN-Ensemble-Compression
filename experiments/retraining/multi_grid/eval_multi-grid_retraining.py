@@ -1,6 +1,6 @@
 import os
 
-from data.output import get_output_base_path
+from training.in_out.directories import get_output_base_path
 from training.in_out import directories as io
 from training.in_out.multi_run_experiment import MultiRunExperiment
 

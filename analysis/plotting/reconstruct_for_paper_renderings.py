@@ -4,7 +4,7 @@ import numpy as np
 import torch
 import pyrenderer
 
-from analysis.deviation_statistics import CompressionStatistics
+from analysis.statistics import CompressionStatistics
 from data.datasets.univariate import WorldSpaceDensityEvaluator
 from inference.compression import CompressedArray, TTHRESH, SZ3, ZFP
 

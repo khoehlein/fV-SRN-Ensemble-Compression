@@ -4,8 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from analysis.experiment_loading import load_experiment_data
-from data.output import get_output_base_path
-
+from training.in_out.directories import get_output_base_path
 
 root_folder = os.path.join(get_output_base_path(), 'ensemble/multi_core')
 baseline_experiment_folder = os.path.join(root_folder, 'num_channels')

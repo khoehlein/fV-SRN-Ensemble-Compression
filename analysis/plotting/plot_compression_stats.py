@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 
-from data.output import get_output_base_path
+from training.in_out.directories import get_output_base_path
 
 display_names = {
     'sz3': 'SZ3',

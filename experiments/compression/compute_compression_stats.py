@@ -3,9 +3,9 @@ import os.path
 import numpy as np
 import pandas as pd
 
-from analysis.deviation_statistics import DeviationStatistics
+from analysis.statistics import DeviationStatistics
 from data.necker_ensemble.single_variable import load_ensemble, load_scales, revert_scaling
-from data.output import get_output_base_path
+from training.in_out.directories import get_output_base_path
 from inference.compression import CompressedArray, SZ3, TTHRESH, ZFP
 
 

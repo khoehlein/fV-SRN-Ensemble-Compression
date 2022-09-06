@@ -3,8 +3,6 @@ import os
 import socket
 from enum import Enum
 
-from data.output import get_output_base_path
-
 
 class DebugMode(Enum):
     DEBUG = 'debug'
@@ -13,15 +11,33 @@ class DebugMode(Enum):
 
 DEBUG_MODE: DebugMode = None
 
-PROJECT_BASE_PATH ={
-    DebugMode.DEBUG: '/path/to/debug/project',
-    DebugMode.PRODUCTION: '/path/to/production/project',
-}
 
+def set_debug_mode(args):
+    global DEBUG_MODE
+    DEBUG_MODE = DebugMode.DEBUG if args['mode'] == 'debug' else DebugMode.PRODUCTION
+    print(f'[INFO] Running scripts with path configurations for {DEBUG_MODE.value} mode.')
+    return DEBUG_MODE
+
+
+PROJECT_BASE_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', '..'))
+OUTPUT_BASE_PATH = '/path/to/output/dir'
+INTERPRETER_PATH = '/path/to/bin/python'
 DATA_BASE_PATH = {'host-name': '/path/to/data'}
 
-INTERPRETER_PATH = '/path/to/bin/python'
-OUTPUT_BASE_DIR = get_output_base_path()
+
+def get_project_base_path():
+    return PROJECT_BASE_PATH
+
+
+def get_data_base_path():
+    host_name = socket.gethostname()
+    return DATA_BASE_PATH[host_name]
+
+
+def get_output_base_path():
+    return OUTPUT_BASE_PATH
+
+
 OUTPUT_DIR_NAME = 'runs'
 LOG_DIR_NAME = 'log'
 
@@ -32,25 +48,8 @@ def build_parser():
     return parser
 
 
-def set_debug_mode(args):
-    global DEBUG_MODE
-    DEBUG_MODE = DebugMode.DEBUG if args['mode'] == 'debug' else DebugMode.PRODUCTION
-    print(f'[INFO] Running scripts with path configurations for {DEBUG_MODE.value} mode.')
-    return DEBUG_MODE
-
-
-def get_project_base_path():
-    assert DEBUG_MODE is not None, 'Debug mode must be set before path can be obtained!'
-    return PROJECT_BASE_PATH[DEBUG_MODE]
-
-
-def get_data_base_path():
-    host_name = socket.gethostname()
-    return DATA_BASE_PATH[host_name]
-
-
 def get_output_directory(experiment_name, overwrite=False, return_output_dir=False, return_log_dir=False):
-    experiment_dir = os.path.join(OUTPUT_BASE_DIR, experiment_name)
+    experiment_dir = os.path.join(OUTPUT_BASE_PATH, experiment_name)
     if not os.path.isdir(experiment_dir):
         os.makedirs(experiment_dir)
     else:

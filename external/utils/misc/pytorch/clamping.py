@@ -1,5 +1,5 @@
 import torch
-from utils.misc.pytorch import VersionedModule
+from .versionedmodule import VersionedModule
 
 
 class Clamp(VersionedModule):

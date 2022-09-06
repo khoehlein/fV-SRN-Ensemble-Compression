@@ -3,7 +3,7 @@ import os
 import numpy as np
 
 from data.necker_ensemble.single_variable import load_ensemble, load_scales
-from data.output import get_output_base_path
+from training.in_out.directories import get_output_base_path
 from experiments.compression.compute_compression_stats import evaluate_sz3, evaluate_tthresh, evaluate_zfp
 
 

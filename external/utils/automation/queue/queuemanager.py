@@ -4,12 +4,10 @@ import fcntl
 import sqlite3
 from sqlite3 import Error as SQLError
 from enum import Enum
-from utils.automation.queue import ComputeJob
+from .computejob import ComputeJob
 
-from utils.misc import get_timestamp_string
+from ..helpers import get_timestamp_string
 
-
-LAUNCHER_QUEUE = '/home/hoehlein/PycharmProjects/queue'
 
 DATABASE_FOLDER = 'sqlite'
 DATABASE_FILE = 'queue.db'

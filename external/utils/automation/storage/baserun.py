@@ -1,7 +1,7 @@
 import os
 import json
 
-from utils.misc import get_timestamp_string
+from ..helpers import get_timestamp_string
 
 
 class BaseRun(object):

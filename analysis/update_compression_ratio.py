@@ -5,7 +5,7 @@ from functools import lru_cache
 import pandas as pd
 import torch
 
-from analysis.deviation_statistics import CompressionStatistics
+from analysis.statistics import CompressionStatistics
 
 
 @lru_cache(maxsize=10)

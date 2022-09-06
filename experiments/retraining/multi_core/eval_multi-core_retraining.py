@@ -1,6 +1,6 @@
 import os
 
-from data.output import get_output_base_path
+from training.in_out.directories import get_output_base_path
 from training.in_out import directories as io
 from training.in_out.multi_run_experiment import MultiRunExperiment
 
@@ -51,8 +51,8 @@ PARAMETERS = {
     '--data-storage:ensemble:index-range': args['new_members'],
 }
 
-if __name__ == '__main__':
 
+if __name__ == '__main__':
     project_base_path = io.get_project_base_path()
 
     output_directory, log_directory = io.get_output_directory(

@@ -3,7 +3,7 @@ import torch
 from torch.utils.tensorboard import SummaryWriter
 
 from .baserun import BaseRun
-from utils.misc import get_timestamp_string
+from ..helpers import get_timestamp_string
 
 
 class PyTorchRun(BaseRun):

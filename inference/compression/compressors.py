@@ -9,7 +9,7 @@ from typing import List, Any, Tuple, Optional
 import numpy as np
 import zfpy
 
-from data.output import get_project_base_path
+from training.in_out.directories import get_project_base_path
 
 STRUCT_DTYPE_FLAGS = {
     np.dtype(float): 'f',
