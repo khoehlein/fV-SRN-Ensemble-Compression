@@ -4,12 +4,8 @@ build/
 cmake-build-debug/
 
 # Python
-/applications/.idea
-/applications/env
-/applications/kernel_cache
 *.pyc
 .ipynb_checkpoints/
-/applications/experiments/**/*.sh
 
 # LaTeX
 *-eps-converted-to.pdf
@@ -24,11 +20,6 @@ cmake-build-debug/
 # Results
 *.pygstyle
 *.pygtex
-/applications/volnet/cache/
-/applications/volnet/results/
-*mc-cache.hdf5
-/applications/test-*.png
-*.png
 *.csv
 
 # Git

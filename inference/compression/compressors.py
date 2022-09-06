@@ -9,6 +9,7 @@ from typing import List, Any, Tuple, Optional
 import numpy as np
 import zfpy
 
+from data.output import get_project_base_path
 
 STRUCT_DTYPE_FLAGS = {
     np.dtype(float): 'f',
@@ -133,7 +134,7 @@ class _CLICompressor(ICompressor):
 
 class SZ3(_CLICompressor):
 
-    EXE_PATH = 'sz3' #'/home/hoehlein/software/SZ3/bin/sz3'
+    EXE_PATH = os.path.join(get_project_base_path(), 'external/sz3/bin/sz3')
 
     class CompressionMode(Enum):
         ABS = 'ABS'
@@ -176,7 +177,7 @@ class SZ3(_CLICompressor):
 
 class TTHRESH(_CLICompressor):
 
-    EXE_PATH = '/home/hoehlein/PycharmProjects/third-party/tthresh/build/tthresh' #'/home/hoehlein/software/TTHRESH/bin/tthresh'
+    EXE_PATH = os.path.join(get_project_base_path(), 'external/tthresh/build/tthresh') #'/home/hoehlein/software/TTHRESH/bin/tthresh'
 
     class CompressionMode(Enum):
         RMSE = '-r'

@@ -1,4 +1,4 @@
-name: fvsrn
+name: python38torch18
 channels:
   - pytorch
   - plotly
