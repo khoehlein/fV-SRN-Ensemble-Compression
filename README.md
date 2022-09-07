@@ -1,10 +1,13 @@
 # Evaluation of Volume Representation Networks for Meteorological Ensemble Compression
 
-Kevin Höhlein, Sebastian Weiss and Rüdiger Westermann
+Kevin Höhlein[<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />](https://orcid.org/0000-0002-4483-8388), 
+Sebastian Weiss[<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />](https://orcid.org/0000-0003-4399-3180) and Rüdiger Westermann[<img alt="ORCID logo" src="https://info.orcid.org/wp-content/uploads/2019/11/orcid_16x16.png" width="16" height="16" />](https://orcid.org/0000-0002-3394-0731)
 
 [![DOI](https://zenodo.org/badge/532983107.svg)](https://zenodo.org/badge/latestdoi/532983107)
 
 ![Teaser](analysis/figures/title_image.png)
+
+Comparison of field ensemble reconstruction quality for different floating-point compressors (SZ3, TThresh) and volume representation networks (Multi-decoder, Multi-grid) at ~250x compression.
 
 ## Abstract
 
@@ -36,7 +39,7 @@ A Python environment can be set up using [`environment.yml`](environment.yml). U
 
     conda env create -f environment.yml
     conda activate python38torch18
-    bash setup.sh 
+    sh setup.sh 
 
 The file `setup.sh` is provided for convenience and summarizes the build procedures for the submodules. For details (and common pitfalls) concerning these, we refer to the respective original repositories.
 After running the setup, the pyrenderer binaries directory needs to be added to `PYTHONPATH` to allow the interpreter to find it.
@@ -79,10 +82,10 @@ Experiments related to the compressors are located in [`experiments/compression`
 
 ### Analysis of models and compressors
 
-Code related to the analysis of compression and reconstruction performance of volume representation networks and classical compressors,including plotting functionality is located in [`analysis`](analysis).
+Code related to the analysis of compression and reconstruction performance of volume representation networks and classical compressors, including plotting functionality is located in [`analysis`](analysis).
 The core functionality is implemented in the classes `DeviationStatistics` and `CompressionStatistics` in [`analysis/statistics.py`](analysis/statistics.py). 
 The script [`analysis/export_to_pyrenderer.py`](analysis/export_to_pyrenderer.py) can be used to export volume representation networks of type `PyrendererSRN` to pyrenderer format.
 
 ### Rendering
 
-Rendering ov volumetric scenes can be achieved using [pyrenderer](https://github.com/shamanDevel/fV-SRN). For an exemplary use case, see e.g. [`data/datasets/univariate/visualization_dataset.py`](data/datasets/univariate/visualization_dataset.py).
+Rendering of volumetric scenes can be achieved using the [pyrenderer](https://github.com/shamanDevel/fV-SRN) backend. For an exemplary use case, see e.g. [`data/datasets/univariate/visualization_dataset.py`](data/datasets/univariate/visualization_dataset.py).
