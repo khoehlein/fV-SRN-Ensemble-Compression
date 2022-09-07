@@ -2,6 +2,8 @@
 
 Kevin Höhlein, Sebastian Weiss and Rüdiger Westermann
 
+[![DOI](https://zenodo.org/badge/532983107.svg)](https://zenodo.org/badge/latestdoi/532983107)
+
 ![Teaser](analysis/figures/title_image.png)
 
 ## Abstract
